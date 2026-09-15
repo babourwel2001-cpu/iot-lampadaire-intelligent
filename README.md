@@ -1,34 +1,49 @@
 # Projet IoT - Lampadaire Intelligent
 
-## Description
+## À propos
 
-Système de collecte de données pour l'éclairage public intelligent.
-Un capteur ultrason (HC-SR04) mesure une distance, un microcontrôleur
-ESP32-WROOM-32E traite les données, les affiche sur un écran LCD I2C,
-et les publie via le protocole MQTT sur un broker Mosquitto.
+Je suis Ibrahima BA, étudiant en 2ème année du cycle d'ingénieur
+à l'ESIEN, spécialité IoT, Sécurité et Ville Intelligente.
 
-Ce projet est réalisé dans le cadre de la formation d'ingénieur
-en IoT, Sécurité et Ville Intelligente à l'ESIR Rennes.
+Ce projet est un projet personnel que je mène en parallèle de ma
+formation. L'objectif est de construire, étape par étape, un système
+IoT complet pour l'éclairage public intelligent, en partant du capteur
+jusqu'à la sécurisation par PKI.
 
-## Objectifs
+Ce dépôt me sert de carnet de bord. J'y documente mon avancement,
+mes choix techniques, mes erreurs et mes apprentissages. Il est
+ouvert aux conseils, remarques et suggestions.
 
-- Lecture d'un capteur ultrason HC-SR04
-- Affichage local sur LCD I2C (LCM1602)
-- Connexion WiFi
-- Communication MQTT (non sécurisée)
-- Sécurisation TLS (à venir)
-- Authentification par certificat mTLS (à venir)
-- Déploiement d'une PKI (à venir)
-- Simulation d'attaque par usurpation d'identité (à venir)
-- Détection d'anomalies par IA (à venir)
+## Description du projet
 
-## Architecture
+Le système collecte des données de distance via un capteur ultrason
+HC-SR04. Un microcontrôleur ESP32-WROOM-32E traite ces données, les
+affiche localement sur un écran LCD I2C, et les publie via le protocole
+MQTT sur un broker Mosquitto installé sur PC.
 
-Capteur HC-SR04 --> ESP32 --> WiFi --> Broker MQTT --> Terminal
+À terme, le projet intégrera une PKI complète (Root CA, Intermediate CA),
+une authentification par certificat (mTLS), une simulation d'attaque par
+usurpation d'identité, et une détection d'anomalies par IA.
+
+## État d'avancement
+
+- [x] Lecture d'un capteur ultrason HC-SR04
+- [x] Affichage local sur LCD I2C (LCM1602)
+- [x] Connexion WiFi
+- [x] Communication MQTT (non sécurisée)
+- [ ] Sécurisation TLS
+- [ ] Authentification par certificat mTLS
+- [ ] Déploiement d'une PKI
+- [ ] Simulation d'attaque par usurpation d'identité
+- [ ] Détection d'anomalies par IA
+
+## Architecture actuelle
+
+Capteur HC-SR04 --> ESP32 --> WiFi --> Broker MQTT --> Terminal PC
                        |
                        +--> LCD I2C
 
-## Matériel
+## Matériel utilisé
 
 | Composant        | Modèle          | Quantité |
 |------------------|-----------------|----------|
@@ -36,7 +51,7 @@ Capteur HC-SR04 --> ESP32 --> WiFi --> Broker MQTT --> Terminal
 | Capteur          | HC-SR04         | 1        |
 | Écran            | LCM1602 + I2C   | 1        |
 
-## Logiciel
+## Logiciel utilisé
 
 | Logiciel    | Version | Usage          |
 |-------------|---------|----------------|
@@ -66,11 +81,7 @@ iot-lampadaire-intelligent/
 +-- scripts/
 +-- rapport/
 
-## Installation
-
-Voir docs/installation.md (à venir).
-
-## Résultats
+## Résultats actuels
 
 | Métrique          | Valeur     |
 |-------------------|------------|
@@ -85,11 +96,19 @@ Voir docs/installation.md (à venir).
 - Architecture : docs/architecture.md
 - Sécurité : docs/securite.md
 
+## Conseils et remarques
+
+Ce projet est ouvert aux conseils. Si vous avez des suggestions
+sur l'architecture, la sécurité, le code ou la documentation,
+n'hésitez pas à ouvrir une issue ou à me contacter.
+
 ## Licence
 
 MIT - voir LICENSE
 
-## Auteur
+## Contact
 
-babourwel2001-cpu
+Ibrahima BA
+Étudiant en 2ème année cycle ingénieur
+ESIEN - Spécialité IoT, Sécurité et Ville Intelligente
 GitHub : https://github.com/babourwel2001-cpu
