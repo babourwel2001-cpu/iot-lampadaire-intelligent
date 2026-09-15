@@ -4,11 +4,11 @@
 #include <LiquidCrystal_I2C.h>
 
 // ==================== CONFIGURATION WIFI ====================
-const char* ssid = "Braims";              // ← Partage mobile
-const char* password = "Braims2023";           // ← Mot de passe
+const char* ssid = "ssid";              // ← Partage mobile
+const char* password = "password";           // ← Mot de passe
 
 // ==================== CONFIGURATION MQTT ====================
-const char* mqtt_server = "10.202.1.227";   // ← IP de ton PC
+const char* mqtt_server = "10.202.1.227";   // ← IP du PC
 const int mqtt_port = 1883;
 const char* mqtt_topic_data = "lampadaire/1/data";
 const char* mqtt_topic_command = "lampadaire/1/command";
